@@ -1,0 +1,24 @@
+<form [formGroup]="empForm" (ngSubmit)=addEmp()>
+    Name: <input type="text" formControlName="name">
+    City: <input type="text" formControlName="city">
+    Age: <input type="text" formControlName="age">
+    Salary: <input type="text" formControlName="salary">
+    <input type="submit" value="Add Employee">
+</form>
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>City</th>
+        <th>Salary</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emprec of empData">
+            <td>{{emprec.name}}</td>
+            <td>{{emprec.age}}</td>
+            <td>{{emprec.salary}}</td>
+            <td>{{emprec._id}}</td>
+        </tr>
+    </tbody>
+</table>

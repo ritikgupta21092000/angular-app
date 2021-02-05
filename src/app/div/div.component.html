@@ -1,0 +1,13 @@
+<form [formGroup]="divForm" (ngSubmit)=getDiv()>
+    Number1: <input type="text" formControlName="num1">
+    <br>
+    Number2: <input type="text" formControlName="num2">
+    <br>
+    <input type="submit" value="Submit Form">
+
+    Form Values:
+    {{divForm.value | json}}
+</form>
+<div *ngIf="result">
+    {{divForm.value.num1}} % {{divForm.value.num2}} = {{div}}
+</div>

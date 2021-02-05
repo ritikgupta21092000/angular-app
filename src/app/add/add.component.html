@@ -1,0 +1,12 @@
+<div>
+    <input type="text" [(ngModel)]="num" (keyup)=getSquare()>
+    <br>
+    Square of {{num}} is {{sqr}}
+</div>
+
+<div>
+    <input type="text" [(ngModel)]="no1">
+    <input type="text" [(ngModel)]="no2">
+    <button (click)=getAdd()>Add</button>
+    {{no1}} + {{no2}} = {{addition}}
+</div>
